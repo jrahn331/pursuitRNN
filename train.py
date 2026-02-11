@@ -27,7 +27,7 @@ from utility import set_gpu
 # ==========================================================
 # Load behavioral data (.mat)
 # ==========================================================
-MAT_FILE_NAME = "behavior_data/eyeVelData_EV70_MA70_Norm_recon_dir_rotate.mat"
+MAT_FILE_NAME = ".../behavior_data.mat"
 mat_file = scipy.io.loadmat(MAT_FILE_NAME)
 mat_file_value = mat_file['Data']
 
