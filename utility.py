@@ -1,11 +1,8 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-# vim:fenc=utf-8
-#
-# Name: Robert Kim
-# Date: October 11, 2019
-# Email: rkim@salk.edu
-# Description: Contains several general-purpose utility functions
+"""
+Name: Jungryul Ahn
+Date: February 12, 2026
+Email: jrahn331@g.skku.edu
+"""
 
 import os
 import tensorflow as tf
@@ -17,7 +14,7 @@ def set_gpu(gpu, frac):
 
     INPUT
         gpu: string label for gpu (i.e. '0')
-        frac: gpu memory fraction (i.e. 0.3 for 30% of the total memory)
+        gpu_frac: gpu memory fraction (i.e. 0.7 for 70% of the total memory)
     OUTPUT
         tf sess config
     """
