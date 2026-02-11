@@ -95,6 +95,7 @@ After training, the script automatically:
 - Behavioral eye velocity data is included.
 - If you use this repository for your research, please cite our work:
   'Tuned inhibitory control of neuronal firing thresholds explains predictive sensorimotor behavior'
+- This project is licensed under the MIT License.
 
 ## Contact
 - Jungryul Ahn
