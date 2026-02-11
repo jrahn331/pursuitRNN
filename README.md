@@ -16,6 +16,7 @@ The code was developed and tested with:
 - Python 3.6
 - tesnorflow 1.10.0
 - tensorflow-gpu 1.10.0 (optional, recommended if GPU is available)
+- CUDA: 11.8
 - numpy 1.14.5
 - scipy 1.5.0
 
