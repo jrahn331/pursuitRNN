@@ -34,11 +34,11 @@ The script takes the following command-line arguments:
 - `N`: Number of recurrent neurons in the RNN
 - `decay_taus`: Synaptic decay time constant(ms)
 - `mode`: Training mode
-    `activation` : two-stage training (Stage1 + Stage2)
-    `prior_input` : training with explicit prior input channel
+    - `activation` : two-stage training (Stage1 + Stage2)
+    - `prior_input` : training with explicit prior input channel
 - `stage`: Training stage
-    `1` : train weights (or full network in prior_input mode)
-    `2` : train activation parameters (only valid in activation mode)
+    - `1` : train weights (or full network in prior_input mode)
+    - `2` : train activation parameters (only valid in activation mode)
 - `output_dir`: Directory to save trained model. Models are saved under `<output_dir>/models/pursuit`.
 
 #### Optional arguments  
@@ -49,8 +49,8 @@ The script takes the following command-line arguments:
 - `activation` (default `input_gain`): Activation parameter type trained in Stage-2. Options: input_gain, threshold, response_gain
 
 #### Note  
-> - `--stage` 2 is only valid when `--mode` activation  
-> - `--mode` prior_input only supports `--stage` 1
+- `--stage` 2 is only valid when `--mode` activation  
+- `--mode` prior_input only supports `--stage` 1
   
 ## Example Usage
 ### Stage 1: Train network weights
@@ -82,7 +82,7 @@ python train.py --gpu 0 --gpu_frac 0.7 \
 
 ### Outputs
 After training, the script automatically:
-  Saves the trained model as a MATLAB .mat file containing:
+  - Saves the trained model as a MATLAB .mat file containing:
     - Recurrent weights `w`
     - Input weights `w_in`
     - Output (or redaout) weights `w_out`
@@ -97,5 +97,5 @@ After training, the script automatically:
   'Tuned inhibitory control of neuronal firing thresholds explains predictive sensorimotor behavior'
 
 ## Contact
-Jungryul Ahn
-Email: jrahn331@g.skku.edu
+- Jungryul Ahn
+- Email: jrahn331@g.skku.edu
