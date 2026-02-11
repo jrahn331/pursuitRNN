@@ -4,25 +4,25 @@ This repository contains the implementation of a **continuous-time firing-rate r
 
 The network can be trained using two different strategies:
 
-### 1. Two-stage activation training ('activation')
+### 1. Two-stage activation training (`activation`)
   - Stage 1: Train recurrent and output weights
   - Stage 2: Freeze weights and train activation parameters only
-### 2. Prior-input training ('prior_input')
+### 2. Prior-input training (`prior_input`)
   - Network receives an explicit prior signal as an additional input channel
   - Only single-stage training is supported
 
 ## Requirements
 The code was developed and tested with:
 - Python 3.6
-- tesnorflow 1.10.0
+- tensorflow 1.10.0
 - tensorflow-gpu 1.10.0 (optional, recommended if GPU is available)
-- CUDA: 11.8
+- CUDA: 9.0
 - numpy 1.14.5
 - scipy 1.5.0
 
 ## Usage
 
-### Training Script ('train.py')
+### Training Script (`train.py`)
 
 The main script `train.py` trains a firing-rate RNN for the smooth pursuit task using behavioral eye velocity data.
 It supports two different training modes:
@@ -86,18 +86,62 @@ After training, the script automatically:
   - Saves the trained model as a MATLAB .mat file containing:
     - Recurrent weights `w`
     - Input weights `w_in`
-    - Output (or redaout) weights `w_out`
+    - Output (or readout) weights `w_out`
     - Output bias `b_out`
     - Activation parameters
     - Training loss history
     - Example filename: Task_pursuit_N_250_Tau_30_2026_02_11_18122.mat
 
-### Notes
-- Behavioral eye velocity data is included.
-- If you use this repository for your research, please cite our work:
-  'Tuned inhibitory control of neuronal firing thresholds explains predictive sensorimotor behavior'
-- This project is licensed under the MIT License.
+## Dataset: behavior_data.mat
+
+This repository includes **behavior_data.mat**, a behavioral dataset used for training and evaluating the smooth pursuit RNN model.
+
+### Data description
+
+- Contains eye velocity recordings during smooth pursuit tasks
+- Includes conditions:
+
+  - High / low contrast
+  - Wide (no prior condition) / narrow (prior condition)
+  - Directional variations (±15° bias)
+- Format: MATLAB structure
+- Sampling: reconstructed and normalized eye velocity
+
+### Intended use
+
+The dataset is provided for:
+
+* Reproducing the results of this repository
+* Training alternative models for smooth pursuit
+* Non-commercial research purposes
+
+### Usage restrictions
+
+* The data may not be used for commercial purposes
+* Redistribution must include this notice
+* Derivative works should cite the original source
+
+### Citation
+If you use this dataset in your research, please cite:
+```
+@article{Park_2023,
+  Author = {Park, Jeongjun and Kim, Seolmin and Kim, HyungGoo R and Lee, Joonyeol},
+  Title = {Prior expectation enhances sensorimotor behavior by modulating population tuning and subspace activity in sensory cortex},
+  Journal = {Science Advances},
+  Volume = {9},
+  Issue = {27},
+  Pages = {eadg4156},
+  Year = {2023},
+  Doi = {10.1126/sciadv.adg4156}
+}
+```
+
 
 ## Contact
 - Jungryul Ahn
 - Email: jrahn331@g.skku.edu
+
+## Notes
+- If you use this repository for your research, please cite our work:
+    > Ahn et al., *Tuned inhibitory control of neuronal firing thresholds explains predictive sensorimotor behavior* (in preparation)
+- This project is licensed under the MIT License.
