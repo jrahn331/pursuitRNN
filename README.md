@@ -153,7 +153,7 @@ Run the stimulation (`snn.py`)
 The script will automatically:
 - Run multiple simulation episodes
 - Estimate tuning widths
-- Perform decoding analysis
+- Perform population vector decoding analysis
 - Save results as .mat files
 
 ## Key Parameters
