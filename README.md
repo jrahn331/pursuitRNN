@@ -136,6 +136,41 @@ If you use this dataset in your research, please cite:
 }
 ```
 
+# Spiking Neural Network
+This repository contains a **spiking neural network (SNN)** model designed to investigate the biophysical mechanism underlying predictive smooth pursuit eye movements.
+
+Unlike the firing-rate RNN model, this implementation explicitly models membrane potential dynamics using leaky integrate-and-fire (LIF) neurons.
+
+## Requirements
+The code was developed and tested with:
+- Python 3.11
+- numpy 2.3.5
+- scipy 1.16.3
+- matplotlib 3.10.8
+
+## Usage
+Run the stimulation (`snn.py`)
+The script will automatically:
+- Run multiple simulation episodes
+- Estimate tuning widths
+- Perform decoding analysis
+- Save results as .mat files
+
+## Key Parameters
+- `N`: Number of neurons (e.g., 500)
+- `T`: Total simulation duration (e.g., 150 ms)
+- `dt`: Simulation time step (temporal resolution) (e.g., 1 ms)
+- `V_rest`: Resting membrane potential (-70 mV)
+- `V_reset`: Reset potential after spike (-70 mV)
+- `V_th`: Spike threshold (-50 mV)
+- `tau_m`: Membrane time constant (e.g., 30 ms)
+- `sigma_exc`: Width of excitatory connections (e.g., 0.5)
+- `sigma_inh`: Width of inhibitory connections (e.g., 2.0)
+- `I_base`: Baseline input current (e.g., 25)
+- `I_gain`: Stimulus-driven gain (e.g., 20)
+- `contrast`: Stimulus contrast (e.g., high contrast 100%: 1.0, low contrast 10%: 0.1)
+- `input_noise_std`: Standard deviation of input noise (e.g., 1.0)
+- `inh_strength`: Strength of direction-dependent inhibition (e.g., 0.5)
 
 ## Contact
 - Jungryul Ahn
